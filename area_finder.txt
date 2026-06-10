@@ -1,0 +1,80 @@
+import math
+
+print('Hello!, This is Area Finder!')
+print('Select Shape: ')
+print('1. Square')
+print('2. Rectangle')
+print('3. Triangle')
+print('4. Circle')
+print('5. Parallelogram')
+print('6. Exit')
+
+while True:
+    choice = input('Enter choice 1/2/3/4/5/6: ')
+
+    if choice == '1':
+        side = float(input('Enter the side of the square: '))
+
+        if side < 0:
+            print('The side cannot be negative')
+        else:
+            area = side ** 2
+            print('The area of the square is:', area)
+
+    elif choice == '2':
+        length = float(input('Enter the length of the rectangle: '))
+
+        if length < 0:
+            print('The length cannot be negative')
+        else:
+            breadth = float(input('Enter the breadth of the rectangle: '))
+
+            if breadth < 0:
+                print('The breadth cannot be negative')
+            else:
+                area = length * breadth
+                print('The area of the rectangle is:', area)
+
+    elif choice == '3':
+        height = float(input('Enter the height of the triangle: '))
+
+        if height < 0:
+            print('The height cannot be negative')
+        else:
+            base = float(input('Enter the base of the triangle: '))
+
+            if base < 0:
+                print('The base cannot be negative')
+            else:
+                area = 0.5 * height * base
+                print('The area of the triangle is:', area)
+
+    elif choice == '4':
+        radius = float(input('Enter the radius of the circle: '))
+
+        if radius < 0:
+            print('The radius cannot be negative')
+        else:
+            area = math.pi * (radius ** 2)
+            print('The area of the circle is:', area)
+
+    elif choice == '5':
+        base = float(input('Enter the base of the parallelogram: '))
+
+        if base < 0:
+            print('The base cannot be negative')
+        else:
+            ht = float(input('Enter the height of the parallelogram: '))
+
+            if ht < 0:
+                print('The height cannot be negative')
+            else:
+                area = base * ht
+                print('The area of the parallelogram is:', area)
+
+    elif choice == '6':
+        print('Thank you for using Area Finder!')
+        break
+
+    else:
+        print('Input Invalid')
